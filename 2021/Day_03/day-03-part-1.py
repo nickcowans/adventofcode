@@ -16,6 +16,8 @@ matrix=np.reshape(data, (nrow, ncol))
 gamma = map(str,list(1*(np.sum(matrix, axis=0) > nrow/2)))
 epsilon = list(1*(np.sum(matrix, axis=0) < nrow/2))
 
+print((epsilon))
+
 gammaD=int("".join(map(str,gamma)),2)
 epsilonD=int("".join(map(str,epsilon)),2)
 
