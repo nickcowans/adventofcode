@@ -1,2 +1,2 @@
 # Start simple
-Tried this in bash, it works, not eligant
+Tried this in bash, it works, not elegant
