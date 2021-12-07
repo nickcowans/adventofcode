@@ -45,6 +45,7 @@ print(calculateIndex(type='co2'))
 #[array([0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1])]
 #[array([1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0])]
 
+# So did this manually...
 oxygenD=int('010110110011',2)
 co2D=int('110001101010',2)
 print(oxygenD)
