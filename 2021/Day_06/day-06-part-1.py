@@ -1,5 +1,4 @@
 import numpy as np
-from datetime import datetime
 
 fileName = "input.txt"
 #fileName = "example.txt"
