@@ -7,7 +7,6 @@ maxcal = [0,0,0]
 thiscal = 0
 
 for i in range(0, fileSize):
-    print(data[i].rstrip())
     if data[i] == "\n":
         if thiscal > maxcal[0]:
             maxcal[0] = thiscal
