@@ -9,7 +9,7 @@ fi
 day=$(printf "%02d" ${1})
 
 if [[ "${2}" == "" ]]; then
-    year=2021
+    year=2022
 else
     year=${2}
 fi
@@ -22,7 +22,10 @@ if [[ ! -d "$year/Day_$day" ]]; then
     mkdir $year/Day_$day
 fi
 
-touch $year/Day_$day/input.txt
 touch $year/Day_$day/example.txt
 touch $year/Day_$day/day-$day-part-1.py
 touch $year/Day_$day/day-$day-part-2.py
+touch $year/Day_$day/day-$day.py
+
+source .session
+curl https://adventofcode.com/$year/day/$day/input --cookie "session=${SESSION}" > $year/Day_$day/input.txt
