@@ -7,6 +7,8 @@ if [[ "${1}" == "" ]]; then
 fi
 
 day=$(printf "%02d" ${1})
+dayAOC=${1}
+
 
 if [[ "${2}" == "" ]]; then
     year=2022
@@ -28,4 +30,4 @@ touch $year/Day_$day/day-$day-part-2.py
 touch $year/Day_$day/day-$day.py
 
 source .session
-curl https://adventofcode.com/$year/day/$day/input --cookie "session=${SESSION}" > $year/Day_$day/input.txt
+curl https://adventofcode.com/$year/day/$dayAOC/input --cookie "session=${SESSION}" > $year/Day_$day/input.txt
