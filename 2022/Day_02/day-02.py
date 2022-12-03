@@ -37,4 +37,4 @@ for i in range(0, len(games)-1):
     scores2.append(calcScore2(gameComp[0], gameComp[1]))
 
 print(sum(scores1)) # Part 1
-print(sum(scores2)) # Part 1
+print(sum(scores2)) # Part 2
