@@ -26,7 +26,7 @@ print(calScore(list(range(20,221,40)),xHistory)) # Part 1
 message="\n"
 for cycle in range(len(xHistory)-1):
     row = cycle // 40
-    message+="##" if(cycle-row*40 in [xHistory[cycle]-1,xHistory[cycle],xHistory[cycle]+1]) else "  "
+    message+="🟨" if(cycle-row*40 in [xHistory[cycle]-1,xHistory[cycle],xHistory[cycle]+1]) else "⬛"
     message+="\n" if(row != ((cycle+1) // 40)) else ""
 
 print(message) # Part 2
