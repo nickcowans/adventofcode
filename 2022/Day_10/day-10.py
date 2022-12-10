@@ -15,13 +15,14 @@ for instruction in instructions:
         x += value
         xHistory.append(x)
 
-def calScore(ns,array):
+def calculateSignalStrength(ns,array):
+    """Calculate the sum of signal strengths for cycles in ns."""
     score=0
     for n in ns:
         score+=n*array[n-1]
     return score
 
-print(calScore(list(range(20,221,40)),xHistory)) # Part 1
+print(calculateSignalStrength(list(range(20,221,40)),xHistory)) # Part 1
 
 message="\n"
 for cycle in range(len(xHistory)-1):
