@@ -19,25 +19,25 @@ for monkey in range(len(monkeyData)):
     trues.append(monkeyData[monkey].split("\n")[4].split("throw to monkey ")[1])
     falses.append(monkeyData[monkey].split("\n")[5].split("throw to monkey ")[1])
 
-insepctsItems1=[0 for _ in range(len(monkeyData))]
-insepctsItems2=[0 for _ in range(len(monkeyData))]
+inspectsItems1=[0 for _ in range(len(monkeyData))]
+inspectsItems2=[0 for _ in range(len(monkeyData))]
 
 commonMultiplier = 1
 for test in tests:
     commonMultiplier *= int(test)
 
-def runPart(part=1, noRounds=20, items=items1, insepctsItems=insepctsItems1):
+def runPart(part=1, noRounds=20, items=items1, inspectsItems=inspectsItems1):
     for _ in range(noRounds):
         for monkey in range(len(monkeyData)):
             for item in items[monkey]:
-                insepctsItems[monkey]+=1
-                mult = int(item) if operations[monkey][1]=="old" else int(operations[monkey][1])
-                new = int(item)+mult if operations[monkey][0]=="+" else int(item)*mult
+                inspectsItems[monkey]+=1
+                mult = item if operations[monkey][1]=="old" else int(operations[monkey][1])
+                new = item+mult if operations[monkey][0]=="+" else item*mult
                 new = new // 3 if part==1 else new % commonMultiplier # only remainder of common multipler matters
                 newMonkey = int(trues[monkey]) if new % int(tests[monkey]) == 0 else int(falses[monkey])
                 items[newMonkey].append(new)
             items[monkey]=[]
-    return sorted(insepctsItems,reverse=True)[0]*sorted(insepctsItems,reverse=True)[1]
+    return sorted(inspectsItems,reverse=True)[0]*sorted(inspectsItems,reverse=True)[1]
 
-print(runPart(part=1, noRounds=20, items=items1, insepctsItems=insepctsItems1))
-print(runPart(part=2, noRounds=10000, items=items2, insepctsItems=insepctsItems2))
+print(runPart(part=1, noRounds=20, items=items1, inspectsItems=inspectsItems1))
+print(runPart(part=2, noRounds=10000, items=items2, inspectsItems=inspectsItems2))
