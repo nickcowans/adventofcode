@@ -23,7 +23,7 @@ while validPaths: # For each validPath
             continue # been there, got t-shirt, do nothing
         if testRow < 0 or testRow >= len(grid) or testCol < 0 or testCol >= (len(grid[0])):
             continue # space doesn't exist, do nothing
-        if ord(grid[testRow][testCol]) - ord(grid[thisRow][thisCol]) > 1: # has to be 0 or 1
+        if ord(grid[testRow][testCol]) - ord(grid[thisRow][thisCol]) > 1: # has to be 0 or 1 or negative any number
             continue # step too far, do nothing
         if (testRow, testCol) == (endRow, endCol):
             print(step + 1) # FOUND IT! Part 1
