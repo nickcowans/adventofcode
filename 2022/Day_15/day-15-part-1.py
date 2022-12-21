@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 import re
-from collections import deque
+
 with open("input.txt", "r") as f:
     details = f.read().strip().split("\n")
 
