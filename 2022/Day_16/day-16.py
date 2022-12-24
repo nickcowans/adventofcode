@@ -49,7 +49,7 @@ for index, element in enumerate(activeValves):
 cache = {}
 
 ## Depth First (https://en.wikipedia.org//wiki/Depth-first_search)
-# Highly inspired by https://github.com/hyper-neutrino/advent-of-code
+# Highly inspired by https://github.com/hyper-neutrino/advent-of-code
 # I started off trying to do this with deque (see day-16-part-1.py) but I 
 # couldn't get it to optimise for input
 def depthFirstSearch(time, currentValve, openValves):
@@ -76,7 +76,7 @@ print(depthFirstSearch(30, "AA", 0))
 # I think if I were left alone in a room being fed and watered for a month with
 # nothing else to do I would not have worked this out without hyper-neutrino's
 # video - I have learnt a lot about bit manipulation!
-# https://www.chubbydeveloper.com/bit-manipulation-python/
+# (e.g. see https://www.chubbydeveloper.com/bit-manipulation-python/)
 
 b = (1 << len(activeValves)) - 1
 #print(bin(b))
