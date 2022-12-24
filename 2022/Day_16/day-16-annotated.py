@@ -69,9 +69,10 @@ def depthFirstSearch(time, currentValve, openValves):
         remainingTime = time - (distanceMap[currentValve][neighbour] + 1)
         if remainingTime <= 0:
             continue
-        print(currentValve,"Neighbour:",neighbour, bin(openValves | openValve)[2:].zfill(6))
+        print(currentValve,"Neighbour:",neighbour, ", open valve:", bin(openValves | openValve)[2:].zfill(6))
         maxPressure = max(maxPressure, depthFirstSearch(remainingTime, neighbour, openValves | openValve) + valvePressures[neighbour]*remainingTime)
-        
+
+    print(currentValve, "fully explored, move onto next")    
     cache[(time, currentValve, openValves)] = maxPressure
 
     return maxPressure
