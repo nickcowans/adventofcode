@@ -64,7 +64,7 @@ def depthFirstSearch(time, currentValve, openValves):
     for neighbour in distanceMap[currentValve]:
         openValve = 1 << valveIndex[neighbour]
         if openValves & openValve: # this means this valve is already open, so continue
-            print(currentValve,"Neighbour:",neighbour,"already open")
+            print(currentValve,"Neighbour:",neighbour,"already open",  bin(openValves)[2:].zfill(6))
             continue
         remainingTime = time - (distanceMap[currentValve][neighbour] + 1)
         if remainingTime <= 0:
