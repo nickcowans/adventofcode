@@ -1,14 +1,21 @@
 # 2023 Stats
+
 <!--- https://adventofcode.com/2023/leaderboard/self --->
+
 ```
       --------Part 1---------   --------Part 2---------
 Day       Time    Rank  Score       Time    Rank  Score
+  5       >24h   86051      0          -       -      -
+  4   02:59:13   26294      0   13:41:29   57175      0
   3   11:32:36   51019      0   14:56:56   51559      0
   2       >24h  102020      0       >24h   98239      0
   1   03:07:51   27140      0       >24h  135896      0
 ```
+
 # 2022 Stats
+
 <!--- https://adventofcode.com/2022/leaderboard/self --->
+
 ```
       --------Part 1--------   --------Part 2--------
 Day       Time   Rank  Score       Time   Rank  Score
