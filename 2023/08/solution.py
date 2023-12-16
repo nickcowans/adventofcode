@@ -40,7 +40,6 @@ stepNo = 0
 cycleNos = defaultdict(int)
 
 while len(cycleNos) < noStarting:
-    noZ = 0
     for i in range(0, len(startingLocations)):
         startingLocations[i] = instructions[startingLocations[i]][
             directionInstructions[currentInstruction]
